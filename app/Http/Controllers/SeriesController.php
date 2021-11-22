@@ -2,11 +2,11 @@
 namespace App\Http\Controllers;
 
 use App\Serie;
-use Illuminate\Http\Request;
 
-class SeriesController
+class SeriesController extends BaseController
 {
-    public function index() {
-        return Serie::all();
+    public function __construct()
+    {
+        $this->class = Serie::class;
     }
 }
